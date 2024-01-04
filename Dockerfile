@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 
 # Copy your project files into the container at /app
-# COPY java-webapp/ app/
+COPY src/ pom.xml README.md .
 
 # Run any essential commands to build your project
 RUN apt-get update && \
