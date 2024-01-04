@@ -7,5 +7,5 @@ FROM ubuntu:latest
 # Run any essential commands to build your project
 RUN apt-get update && \
     apt-get install -y maven && \
-    cd app && \
+    # cd app && \
     mvn clean package
