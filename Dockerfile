@@ -2,7 +2,7 @@ FROM 647980587564.dkr.ecr.us-east-1.amazonaws.com/openjdk:8-jdk-alpine
 ARG JAR_FILE=target/find-links.jar
 ARG JAR_LIB_FILE=target/lib/
 
-RUN mvn clean package
+RUN mvn package
 
 RUN echo "" && ls -R
 
