@@ -4,7 +4,7 @@ ARG JAR_LIB_FILE=target/lib/
 
 RUN mvn clean package
 
-RUN ls -R
+RUN ls -R && date
 
 # cd /usr/local/runme
 WORKDIR /usr/local/runme
