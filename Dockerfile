@@ -1,4 +1,4 @@
-From maven:3.3-jdk-8 as build
+From public.ecr.aws/p8r5g6j7/maven:3.3-jdk-8 as build
 # ARG JAR_FILE=target/find-links.jar
 # ARG JAR_LIB_FILE=target/lib/
 
