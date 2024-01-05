@@ -4,16 +4,16 @@ ARG JAR_LIB_FILE=target/lib/
 
 RUN mvn clean package
 
-RUN ls -R && date
+RUN echo "" && ls -R
 
 # cd /usr/local/runme
 WORKDIR /usr/local/runme
 
 # cp target/app.jar /usr/local/runme/app.jar
-COPY ${JAR_FILE} app.jar
+COPY target/find-links.jar app.jar
 
 # cp -rf target/lib/  /usr/local/runme/lib
-ADD ${JAR_LIB_FILE} lib/
+ADD target/lib/ lib/
 
 # java -jar /usr/local/runme/app.jar
 ENTRYPOINT ["java","-jar","app.jar"]
