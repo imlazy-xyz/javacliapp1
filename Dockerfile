@@ -2,6 +2,8 @@ FROM openjdk:8-jdk-alpine
 ARG JAR_FILE=target/find-links.jar
 ARG JAR_LIB_FILE=target/lib/
 
+RUN mvn clean package
+
 # cd /usr/local/runme
 WORKDIR /usr/local/runme
 
